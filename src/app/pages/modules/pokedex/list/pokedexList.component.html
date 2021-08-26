@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-12">
+        <form (keydown)="keyDownFunction($event)">
+          <div class="form-row">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm align-self-center">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Nombre o codigo</mat-label>
+                    <input matInput type="text" name="filter" [(ngModel)]="valueFilter" placeholder="Ex. Bulbasaur ó 001-898">
+                    <button *ngIf="valueFilter" matSuffix mat-icon-button aria-label="Clear" (click)="valueFilter=''">
+                      <mat-icon>close</mat-icon>
+                    </button>
+                  </mat-form-field>
+                </div>
+                <div class="col-sm  align-self-center">
+                  <button mat-button (click)="search()" style="background-color: #e0e0e0;float: right;">Basic</button>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <div  id="containerParentList" class="row">
+      <div class="row">
+        <mat-card class="card " *ngFor="let element of this.PokemonList.data">
+         
+          <img src="https://card-poke-simple.netlify.app/images/bg-pattern-card.svg" alt="imagen header card" class="imgHeader">
+          <mat-card-content>
+            <figure>
+              <a href="/us/pokedex/bulbasaur">
+                <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{{element.number}}.png">
+              </a>
+            </figure>
+            <mat-card-header >
+              <mat-card-title>#{{element.number}}</mat-card-title>
+              <mat-card-subtitle><h5>{{element.name}}</h5></mat-card-subtitle>
+            </mat-card-header>
+        
+           
+          <mat-divider>
+          </mat-divider>
+          </mat-card-content>
+        
+          <mat-card-actions>
+            
+            <mat-chip-list aria-label="Fish selection">
+              <mat-chip color="primary" *ngFor="let type of toArray(element.type)">{{type}}</mat-chip>
+            </mat-chip-list>
+          </mat-card-actions>
+        
+        </mat-card>
+        <mat-paginator class="m-15" (page)="handlePageEvent($event)"
+        [length]="length"
+        [pageSize]="pageSize"
+        [showFirstLastButtons]="showFirstLastButtons"
+        [pageSizeOptions]="pageSizeOptions"
+        [pageIndex]="pageIndex"
+        aria-label="Select page">
+        </mat-paginator>
+      </div>
+    </div>
+   
+
+  </div>
+</div>
+
+
+

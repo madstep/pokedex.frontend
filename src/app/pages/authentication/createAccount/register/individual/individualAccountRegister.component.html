@@ -1,0 +1,81 @@
+<div class="boxAuthentication">
+  <div class="row">
+    <div class="col">
+      <form class="form-signin">
+        <div class="row">
+          <div class="col-2"  >
+          </div>
+          <div class="col-2"  >
+            <img src="favicon.ico" height="60" width="60" class="mx-auto d-block ">
+          </div>
+          <div  class="col-4 ">
+            <div  class="mx-auto d-block "  style="font-size: 40px;color: #41464b;
+            flex-wrap: nowrap;display: flex!important; font-weight: bolder;">
+              Pokédex
+            </div>
+          </div>
+          <div class="col-2"  >
+          </div>
+        </div>
+        <h1 class="h3 mb-0 font-weight-bold text-center">Create your account</h1>
+
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="txtFirstName">First name</label>
+              <input type="text" class="form-control" id="txtFirstName">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="txtLastName">Last name</label>
+              <input type="text" class="form-control" id="txtLastName">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="txtEmail">Email</label>
+              <input type="text" class="form-control" id="txtEmail">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+              <label for="txtPassword">Password</label>
+              <input type="password" class="form-control" id="txtPassword">
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+              <label for="txtPasswordConfirmed">Confirmed</label>
+              <input type="password" class="form-control" id="txtPasswordConfirmed">
+              <span class="iconViewPassWord material-icons float-right pt-2 pb-2">visibility_off</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col">
+            <a [routerLink]="['']" class="txtStart">I prefer to log in</a>
+          </div>
+          <div class="col text-right">
+            <button [routerLink]="['/RegisterVerifyNumber']" type="button" class="btn btn-primary btnNormal">Next</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+    <div class="col-md-5 containerFormLogo">
+      <div class="container d-flex h-100">
+        <div class="row justify-content-center align-self-center">
+          <img src="favicon.ico" class="imageLogoRegisterSecondary mx-auto">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

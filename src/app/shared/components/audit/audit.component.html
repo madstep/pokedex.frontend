@@ -1,0 +1,58 @@
+<div class="modal fade" id="modalAudit" tabindex="-1" role="dialog" aria-labelledby="modalAudit" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"  *ngIf="audit">
+      <div class="modal-header" >
+        <h5 class="modal-title" id="modalAuditLabel">Audit of item: {{audit.Description | uppercase}} </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="table-responsive tableResponsiveListInformationCar">
+                  <table class="table listInformation table-bordered" style="width:100%">
+                    <thead>
+                      <tr style="display: none;">
+                        <th scope="col">Properties</th>
+                        <th scope="col">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Registration date</td>
+                        <td>{{this.audit.RegistrationDate | date: 'MM/dd/yyyy hhmmss'}}</td>
+                      </tr>
+                      <tr>
+                        <td>Registration User</td>
+                        <td>{{this.audit.RegistrationUser}}</td>
+                      </tr>
+                      <tr>
+                        <td>Modification date</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Modification user</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Unsubscribe date</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer" id="actionModalAudit">
+        <button type="button" class="btn btn-primary btnNormal" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+

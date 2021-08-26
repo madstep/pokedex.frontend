@@ -1,0 +1,63 @@
+<div class="boxAuthentication">
+  <div class="row">
+    <div class="col">
+      <form class="form-signin">
+        <div class="row">
+          <div class="col-2"  >
+          </div>
+          <div class="col-2"  >
+            <img src="favicon.ico" height="60" width="60" class="mx-auto d-block ">
+          </div>
+          <div  class="col-4 ">
+            <div  class="mx-auto d-block "  style="font-size: 40px;color: #41464b;
+            flex-wrap: nowrap;display: flex!important; font-weight: bolder;">
+              Pokédex
+            </div>
+          </div>
+          <div class="col-2"  >
+          </div>
+        </div>
+        <h1 class="h3 mb-0 font-weight-bold text-center mb-4">Enter your cell phone</h1>
+
+        <div class="row">
+          <div class="col">
+            <p class="text-justify mb-0">For you security, Pokedex wants to confirm your identity, so it will send you a text
+              message with a six-digit verification code.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="txtPhoneNumber">Cell phone</label>
+              <input type="text" class="form-control" id="txtPhoneNumber">
+              <img class="iconFlatPhoneNumber float-right pt-2 pb-2" src="favicon.ico" alt="">
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col">
+            <a [routerLink]="['/RegisterIndividual']" class="txtStart">Back</a>
+          </div>
+          <div class="col text-right">
+            <button [routerLink]="['/RegisterVerifyCode']" type="button" class="btn btn-primary btnNormal">Next</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+    <div class="col-md-5 containerFormLogo">
+      <div class="container d-flex h-100">
+        <div class="row justify-content-center align-self-center">
+          <figure>
+            <img src="favicon.ico" class="imageLogoRegisterSecondary mx-auto">
+            <figcaption class="titleLogo">Your information is private and protected</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

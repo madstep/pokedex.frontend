@@ -1,0 +1,61 @@
+.form-group > label
+  top: 44px !important
+  left: 16px !important
+  font-size: 1.0em
+  position: relative
+  background-color: white
+  padding: 0px 5px 0px 5px
+  transition: 0.2s
+  pointer-events: none
+
+.form-group.label-animate>label
+  top: 20px !important
+  left: 6px !important
+  font-size: 1.0rem
+
+.boxAuthentication
+  background-color: white
+  border-radius: 8px
+  border: 1px solid #dadce0
+
+  .form-signin
+    width: 100%
+    max-width: 410px
+    padding: 15px
+    margin: auto
+
+    .form-group
+      margin-bottom: 0 !important
+
+    .form-control
+      box-sizing: border-box
+      height: auto
+      padding: 10px
+      font-size: 16px
+
+  a
+    display: block
+    padding-top: 10px
+    color: #1a73e8
+
+  button[type="submit"]
+    margin-top: 10px
+    color: #fff
+    background-color: #1a73e8
+    border-color: #1a73e8
+
+
+@media screen and (max-width: 900px)
+  .containerFormLogo
+    display: none
+
+  .boxAuthentication
+    width: 448px
+
+@media screen and (max-width: 767px)
+  .boxAuthentication
+    margin: 11vh auto
+
+@media screen and (max-width: 500px)
+  .boxAuthentication
+    width: 300px

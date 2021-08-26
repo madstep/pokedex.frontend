@@ -1,0 +1,103 @@
+  <div class="page-wrapper chiller-theme toggled">
+    <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+      <i class="fas fa-bars"></i>
+    </a>
+    <nav id="sidebar" class="sidebar-wrapper">
+      <div class="sidebar-content">
+        <div class="sidebar-brand">
+          <a [routerLink]="['Home']"><img src="favicon.ico" style="height: 25px;" class="mx-auto d-block imageLogo"></a>
+          <div  style="width: 140px;font-size: 20px;color: #bdbdbd;">
+            Pokédex
+          </div>
+          <div id="close-sidebar">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+        <div class="sidebar-header">
+          <div class="user-pic">
+            <img class="img-thumbnail" src="https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/xsi1hvraloohghtqmjya.png"
+              alt="User picture" style="width: 70px; height: 70px;">
+          </div>
+          <div class="user-info">
+            <span class="user-name">Ash
+              <strong>Ketchum</strong>
+            </span>
+            <span class="user-role">Pokémon Master</span>
+            <span class="user-status">
+              <i class="fa fa-circle"></i>
+              <span>Online</span>
+            </span>
+          </div>
+        </div>
+        <!-- sidebar-header  -->
+        <div class="sidebar-search">
+          <div>
+            <div class="input-group">
+              <input type="text" class="form-control search-menu" placeholder="Search...">
+              <div class="input-group-append">
+                <span class="input-group-text" style="height: 100%;">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- sidebar-search  -->
+        <div class="sidebar-menu">
+          <ul>
+            <li class="header-menu">
+              <span>General</span>
+            </li>
+            
+            <li class="sidebar-pure">
+              <a  id="linkDocuments" [routerLink]="['Pokedex/List']">
+                <i class="material-icons">catching_pokemon</i>
+                <span>Pokedex</span>
+              </a>
+            </li>
+            <li class="sidebar-pure">
+              <a id="linkHome" [routerLink]="['Home']">
+                <i class="fa fa-home"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="sidebar-pure">
+              <a [routerLink]="['']" id="linkLogOff">
+                <i class="fa fa-power-off"></i>
+                <span >Log off</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- sidebar-menu  -->
+      </div>
+      <!-- sidebar-content  -->
+      <div class="sidebar-footer">
+        <a href="#">
+          <i class="fa fa-power-off"></i>
+        </a>
+      </div>
+    </nav>
+    <!-- sidebar-wrapper  -->
+    <main class="page-content">
+      <div class="container-fluid">
+        <section class="card page-content-card">
+          <header class="card-header">
+            <h1 class="card-title titleModule font-weight-bold"></h1>
+          </header>
+          <div class="card-body" style="background-image: url(https://card-poke-simple.netlify.app/images/bg-pattern-top.svg), url(https://card-poke-simple.netlify.app/images/bg-pattern-bottom.svg);
+          background-repeat: no-repeat, no-repeat;
+          background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+          background-color: hsl(185, 75%, 39%);">
+            <router-outlet></router-outlet>
+          </div>
+          <footer class="card-footer text-muted text-center font-weight-bold">
+            Pokédex © 2021
+          </footer>
+        </section>
+      </div>
+
+    </main>
+    <!-- page-content" -->
+  </div>
+  <!-- page-wrapper -->
