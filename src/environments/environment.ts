@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   versioncheckurl: '',
-  backendapi: 'http://localhost:3975/api',
+  backendapi: 'http://localhost:3000/api',
   domainurl: 'http://localhost:4200',
   domain: 'localhost',
   version: require('../../package.json').version,
