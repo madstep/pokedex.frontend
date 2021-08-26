@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   versioncheckurl: '',
-  backendapi: 'http://localhost:2086/api',
+  backendapi: 'https://apipokedexbackend.herokuapp.com/api',
   domainurl: 'http://localhost:4200',
   domain: 'localhost',
   version: require('../../package.json').version,
